@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'FPS',
+'chunked_upload',
     # 'dajaxice',
     # 'dajax'
 ]
