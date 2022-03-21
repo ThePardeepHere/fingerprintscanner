@@ -137,3 +137,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MESSAGE_TAGS = {
     messages.ERROR:"danger",
 }
+
+import django_heroku
+django_heroku.settings(locals())
