@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %} ">
+
+  </head>
+  <body>
+{% for message in messages  %}
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show text-center" role="alert">
+        <strong>Mindgroom: </strong> {{ message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endfor %}
+{% if msg %}
+  <script>
+    alert("{{msg}}")
+  </script>
+  {% endif %}
+<script>
+  function checkpass(){
+    
+    var pass=document.getElementById("pass");
+    var cpass=document.getElementById("repass");
+    if(pass!=cpass)
+    {
+      alert("Both The Password Has To Be Same")
+      return false;
+    }
+    return true;
+  }
+</script>
+<div class="login-box">
+  <h1>Registration</h1>
+    <form id="signup" action="{% url 'register' %}" method="POST">
+    {% csrf_token %}
+    <div class="textbox">
+      <i class="fas fa-user"></i>
+      <input type="text" form="signup" name="username" placeholder="Username" required>
+    </div>
+    <br>
+    <div class="textbox">
+      <i class="fas fa-envelope"></i>
+      <input type="email" form="signup" placeholder="Email" name="email" required>
+      </div><br>
+    <div class="textbox">
+      <i class="fas fa-mobile"></i>
+      <input type="text" form="signup" name="phone" placeholder="Phone Number" required>
+      </div>
+    <br>
+    <div class="textbox">
+      <i class="fas fa-clipboard"></i>
+      <input type="text" form="signup" name="admincode" placeholder="AdminCode" required>
+    </div>
+    <br>
+    <div class="textbox">
+      <i class="fas fa-lock"></i>
+      <input type="password" form="signup" name="pass" placeholder="Password" required>
+    </div><br>
+    <div class="textbox">
+      <i class="fas fa-lock"></i>
+      <input type="password" form="signup" name="repass" placeholder="Confirm Password" required>
+    </div>
+    <br>
+    <div>
+    <input type="submit" form="signup" class="btn" value="Submit" onsubmit="return checkpass()">
+    <a href="{% url 'login_form' %}">
+    <input type="button"  class="btn" value="Already have an account">
+    </a>
+  </form>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  </body>
+</html>

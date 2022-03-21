@@ -1,0 +1,28 @@
+Django==3.2
+numpy
+opencv-contrib-python
+#opencv-python
+Pillow
+
+#pip install opencv-python==3.4.2.17
+
+#home/arbo85xdbpfy/fingerprintscanner/
+
+#fingerprintscanner
+
+#Gmail I’d - Onlinedmittest@gmail.com
+#Password - Password@123
+
+#pip install opencv-contrib-python==3.4.2.17
+
+#http://184.168.119.178:2087
+
+#arbo85xdbpfy
+
+#yF"Lh<66zmb.)wE2
+
+#yF"Lh<66zmb.)wE2
+
+#yF"Lh<66zmb.)wE2
+
+#Password@123
