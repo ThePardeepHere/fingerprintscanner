@@ -1,28 +1,12 @@
+asgiref==3.5.0
+dj-database-url==0.5.0
 Django==3.2
-numpy
-opencv-contrib-python
-#opencv-python
-Pillow
-
-#pip install opencv-python==3.4.2.17
-
-#home/arbo85xdbpfy/fingerprintscanner/
-
-#fingerprintscanner
-
-#Gmail I’d - Onlinedmittest@gmail.com
-#Password - Password@123
-
-#pip install opencv-contrib-python==3.4.2.17
-
-#http://184.168.119.178:2087
-
-#arbo85xdbpfy
-
-#yF"Lh<66zmb.)wE2
-
-#yF"Lh<66zmb.)wE2
-
-#yF"Lh<66zmb.)wE2
-
-#Password@123
+django-heroku==0.3.1
+gunicorn==20.1.0
+numpy==1.22.2
+opencv-contrib-python==4.5.5.62
+Pillow==9.0.1
+psycopg2==2.9.3
+pytz==2021.3
+sqlparse==0.4.2
+whitenoise==6.0.0
